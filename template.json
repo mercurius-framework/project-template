@@ -1,5 +1,5 @@
 {
   "name": "mercurius-bare",
-  "version": "0.0.1"
+  "version": "0.0.1",
   "files": [".gitignore", "LICENCE", "README.md", "config.py", "controllers.py", "dtos.py", "main.py", "service.toml"]
 }
