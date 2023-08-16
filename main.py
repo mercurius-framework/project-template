@@ -3,6 +3,7 @@ from mercurius.core.application import MercuriusApplication
 
 {% for _, import in imports.items() -%}
 from {{import.py_module}} import {{import.entry}}
+
 {%- endfor %}
 
 from .config import RootConfig
