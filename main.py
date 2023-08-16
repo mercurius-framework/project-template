@@ -1,10 +1,9 @@
 import logging
 from mercurius.core.application import MercuriusApplication
 
-{% for _, import in imports.items() -%}
+{% for _, import in imports.items() %}
 from {{import.py_module}} import {{import.entry}}
-
-{%- endfor %}
+{% endfor %}
 
 from .config import RootConfig
 
@@ -13,9 +12,9 @@ logging.basicConfig(level=logging.INFO)
 
 app = MercuriusApplication({{ project_name }}, RootConfig, config_path="{{ project_name }}.toml", controllers_module="controllers")
 
-{% for module_name in selected_modules -%}
+{% for module_name in selected_modules %}
 app.install({{module_name}})
-{%- endfor %}
+{% endfor %}
 
 # This if is important! Only this way the app can be started with an external application server
 if __name__ == "__main__":
