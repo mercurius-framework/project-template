@@ -1,5 +1,11 @@
 {
   "name": "mercurius-bare",
   "version": "0.0.1",
-  "files": [".gitignore", "LICENSE", "README.md", "config.py", "controllers.py", "dtos.py", "main.py", "service.toml"]
+  "files": [".gitignore", "LICENSE", "README.md", "config.py", "controllers.py", "dtos.py", "main.py", "service.toml"],
+  "available_modules": {
+    "rest": {"py_module": "mercurius.rest", "entry": "REST"},
+    "kafka": {"py_module": "mercurius.kafka", "entry": "Kafka"},
+    "data": {"py_module": "mercurius.data.integration", "entry": "Data"},
+    "eventsourcing": {"py_module": "mercurius.eventsourcing.integration", "entry": "EventSourcing"}
+  }
 }
