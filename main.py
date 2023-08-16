@@ -1,6 +1,10 @@
 import logging
 from mercurius.core.application import MercuriusApplication
 
+{% for import in imports %}
+from {{import.py_module}} import {{import.entry}}
+{% endfor %}
+
 from .config import RootConfig
 
 # change this as needed
