@@ -1,7 +1,7 @@
 import logging
 from mercurius.core.application import MercuriusApplication
 
-{% for import in imports %}
+{% for _, import in imports.items() %}
 from {{import.py_module}} import {{import.entry}}
 {% endfor %}
 
